@@ -1,0 +1,9 @@
+<!-- <app-menu [menuItems]="menuItems"></app-menu> -->
+
+<app-recursive-menu [menuItems]="menuItems"></app-recursive-menu>
+<!-- ngbDropdownMenu
+<app-menu-builder [items]="menuItems"></app-menu-builder> -->
+
+<div class="content" role="main">
+    <router-outlet (activate)="onActivate()"></router-outlet>
+</div>

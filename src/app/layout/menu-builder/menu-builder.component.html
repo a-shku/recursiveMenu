@@ -1,0 +1,20 @@
+<ng-container *ngFor="let item of items">
+
+    <ng-container *ngIf="item.children">
+        <!-- тут выводим дропдаун и в него передаем app-menu-builder
+         <menu-item items></menu-item> -->
+        dropDownStart<br>
+        <!-- {{item.title}} -->
+        <!-- <app-menu-item [item]="item"></app-menu-item> -->
+        dropDownEnd<br>
+
+        <app-menu-builder [items]="item.children"></app-menu-builder>
+
+    </ng-container>
+
+    <ng-container *ngIf="!item.children">
+        Child: {{item.title}}<br>
+    </ng-container>
+
+
+</ng-container>

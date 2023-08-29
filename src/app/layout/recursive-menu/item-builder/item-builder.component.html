@@ -1,0 +1,22 @@
+<div [ngbNavItem]="item.route" *ngFor="let item of menuItems">
+    <!-- Branches -->
+    <ng-container *ngIf="item.children">
+        <div [ngbNavItem]="item.route" ngbDropdown [autoClose]="true" display="dynamic"
+            [placement]="['end-top', 'end']">
+            <button ngbDropdownToggle>
+                <i class="{{item.icon}}"></i>
+                {{item.title}}
+            </button>
+            <div ngbDropdownMenu>
+                <app-item-builder #menu [menuItems]="item.children"></app-item-builder>
+                <!-- <app-item-builder #menu [menuItems]="item.children"></app-item-builder> -->
+            </div>
+        </div>
+    </ng-container>
+    <!-- Leaves  -->
+    <a *ngIf="!item.children" ngbDropdownItem [ngbNavItem]="item.route" ngbNavLink
+        [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" ngbNavLink [routerLink]="item.route">
+        <i class="{{item.icon}}"></i>
+        {{item.title}}
+    </a>
+</div>
