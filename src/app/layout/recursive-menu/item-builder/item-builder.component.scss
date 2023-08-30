@@ -1,4 +1,25 @@
+.nav-link {
+    font-weight: 600;
+}
+
 .dropdown-toggle,
 .nav-link {
     font-size: 16px;
+}
+
+.dropdown-item.nav-link.active {
+    color: var(--bs-dropdown-link-active-color);
+}
+
+.nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+}
+
+.bi-gem {
+    color: var(--bs-dropdown-link-active-bg);
+}
+
+.active .bi-gem {
+    color: white;
 }

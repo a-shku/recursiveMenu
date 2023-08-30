@@ -29,7 +29,7 @@ export const MENU_ITEMS: MenuItem[] = [
                     {
                         title: "VEEEERY DEEEEEP",
                         route: "item_1",
-                        icon: "bi-flag",
+                        icon: "bi-sign-stop-fill",
                         children: [
                             {
                                 title: "You've found it!",
@@ -43,12 +43,12 @@ export const MENU_ITEMS: MenuItem[] = [
             {
                 title: "Item 1_2",
                 route: "/category_1/item_2",
-                icon: "bi-sign-stop",
+                icon: "bi-star",
             },
             {
                 title: "Item 1_3",
                 route: "/category_1/item_3",
-                icon: "bi-sign-stop",
+                icon: "bi-flag",
             },
         ],
     },
