@@ -32,7 +32,7 @@ module.exports = {
                     "error",
                     {
                         type: "element",
-                        prefix: "sem",
+                        prefix: "app",
                         style: "kebab-case",
                     },
                 ],
@@ -41,7 +41,7 @@ module.exports = {
                     "error",
                     {
                         type: "attribute",
-                        prefix: "sem",
+                        prefix: "app",
                         style: "camelCase",
                     },
                 ],
@@ -335,7 +335,7 @@ module.exports = {
             files: ["*.spec.ts"],
             parser: "@typescript-eslint/parser",
             parserOptions: {
-                project: "./src/tsconfig.spec.json",
+                project: "./tsconfig.spec.json",
                 ecmaVersion: 2020,
                 sourceType: "module",
             },
