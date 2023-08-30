@@ -1,24 +1,15 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 
-import { MenuItem, MENU_ITEMS } from "./menu/menu-models";
+import { MenuItem, MENU_ITEMS } from "./recursive-menu/menu-models";
 
 @Component({
     selector: "app-layout",
     templateUrl: "./layout.component.html",
     styleUrls: ["./layout.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent {
-    public menuItems: MenuItem[] = MENU_ITEMS;
-    public activeRoute!: string;
+    public menuItems = MENU_ITEMS;
 
-    constructor(private router: Router) {
-        this.menuItems = MENU_ITEMS;
-        // debugger;
-    }
-
-    onActivate(): void {
-        this.activeRoute = this.router.url;
-        // debugger;
-    }
+    constructor() {}
 }

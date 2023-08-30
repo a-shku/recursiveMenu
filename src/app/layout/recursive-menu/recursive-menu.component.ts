@@ -3,12 +3,12 @@ import {
     Component,
     Input,
     OnInit,
-    OnDestroy,
+    inject,
 } from "@angular/core";
-import { RouterEvent, Event, Router, NavigationEnd } from "@angular/router";
-import { Observable, filter, takeUntil, Subject } from "rxjs";
+import { Event, Router, NavigationEnd } from "@angular/router";
+import { Observable, filter } from "rxjs";
 
-import { MenuItem } from "../menu/menu-models";
+import { MenuItem } from "./menu-models";
 
 @Component({
     selector: "app-recursive-menu",
@@ -16,27 +16,22 @@ import { MenuItem } from "../menu/menu-models";
     styleUrls: ["./recursive-menu.component.scss"],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RecursiveMenuComponent implements OnInit, OnDestroy {
+export class RecursiveMenuComponent implements OnInit {
     @Input()
     menuItems: MenuItem[] = [];
 
-    private destroy$$ = new Subject<void>();
+    private router: Router = inject(Router);
+
     public routeUrl$!: Observable<NavigationEnd>;
     public isCollapsed: boolean = true;
 
-    constructor(private router: Router) {}
+    constructor() {}
 
     ngOnInit(): void {
         this.routeUrl$ = this.router.events.pipe(
-            takeUntil(this.destroy$$),
             filter((event: Event): event is NavigationEnd => {
                 return event instanceof NavigationEnd;
             })
         );
-    }
-
-    ngOnDestroy(): void {
-        this.destroy$$.next();
-        this.destroy$$.complete();
     }
 }

@@ -23,7 +23,7 @@ export const MENU_ITEMS: MenuItem[] = [
                 children: [
                     {
                         title: "SubItem 1_1_1",
-                        route: "category_1/item_1/item_1_1",
+                        route: "category_1/item_1/subItem_1_1",
                         icon: "bi-arrow-return-right",
                     },
                     {

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 
-import { MenuItem } from "../../menu/menu-models";
+import { MenuItem } from "../menu-models";
 
 @Component({
     selector: "app-item-builder",

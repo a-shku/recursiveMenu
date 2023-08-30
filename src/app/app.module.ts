@@ -10,7 +10,6 @@ import { PagesModule } from "./pages/pages.module";
     declarations: [AppComponent],
     imports: [BrowserModule, LayoutModule, NgbModule, PagesModule],
     providers: [],
-    // exports: [NgbModule],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
