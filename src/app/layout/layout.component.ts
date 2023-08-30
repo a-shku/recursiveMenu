@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from "@angular/core";
 
-import { MenuItem, MENU_ITEMS } from "./recursive-menu/menu-models";
+import { MENU_ITEMS } from "./recursive-menu/menu-models";
 
 @Component({
     selector: "app-layout",

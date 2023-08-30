@@ -1,11 +1,11 @@
-export type MenuItem = {
+export interface IMenuItem {
     title: string;
     icon: string;
     route: string;
-    children?: MenuItem[];
-};
+    children?: IMenuItem[];
+}
 
-export const MENU_ITEMS: MenuItem[] = [
+export const MENU_ITEMS: IMenuItem[] = [
     {
         title: "Home",
         route: "",

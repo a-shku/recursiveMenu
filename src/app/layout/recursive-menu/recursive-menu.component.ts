@@ -8,7 +8,7 @@ import {
 import { Event, Router, NavigationEnd } from "@angular/router";
 import { Observable, filter } from "rxjs";
 
-import { MenuItem } from "./menu-models";
+import { IMenuItem } from "./menu-models";
 
 @Component({
     selector: "app-recursive-menu",
@@ -18,7 +18,7 @@ import { MenuItem } from "./menu-models";
 })
 export class RecursiveMenuComponent implements OnInit {
     @Input()
-    menuItems: MenuItem[] = [];
+    menuItems: IMenuItem[] = [];
 
     private router: Router = inject(Router);
 
