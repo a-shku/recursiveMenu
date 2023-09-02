@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 
-import { MenuItem } from "../../menu/menu-models";
+import { IMenuItem } from "../menu-models";
 
 @Component({
     selector: "app-item-builder",
@@ -10,5 +10,5 @@ import { MenuItem } from "../../menu/menu-models";
 })
 export class ItemBuilderComponent {
     @Input()
-    menuItems: MenuItem[] = [];
+    menuItems: IMenuItem[] = [];
 }

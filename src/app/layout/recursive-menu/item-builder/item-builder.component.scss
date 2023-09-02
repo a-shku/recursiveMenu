@@ -7,6 +7,19 @@
     font-size: 16px;
 }
 
+.dropdown .dropdown .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding-right: 1.5rem;
+}
+
+.dropdown .dropdown .dropdown-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+}
+
 .dropdown-item.nav-link.active {
     color: var(--bs-dropdown-link-active-color);
 }

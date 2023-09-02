@@ -1,11 +1,11 @@
-export type MenuItem = {
+export interface IMenuItem {
     title: string;
     icon: string;
     route: string;
-    children?: MenuItem[];
-};
+    children?: IMenuItem[];
+}
 
-export const MENU_ITEMS: MenuItem[] = [
+export const MENU_ITEMS: IMenuItem[] = [
     {
         title: "Home",
         route: "",
@@ -23,7 +23,7 @@ export const MENU_ITEMS: MenuItem[] = [
                 children: [
                     {
                         title: "SubItem 1_1_1",
-                        route: "category_1/item_1/item_1_1",
+                        route: "category_1/item_1/subItem_1_1",
                         icon: "bi-arrow-return-right",
                     },
                     {

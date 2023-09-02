@@ -1,6 +1,10 @@
 # TestApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Installation
+
+Install the project's dependencies
+
+-   `yarn install`
 
 ## Development server
 
